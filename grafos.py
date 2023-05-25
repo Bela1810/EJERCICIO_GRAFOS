@@ -79,13 +79,14 @@ while True:
         graph.print_graph()
 
     elif option == "3":
-        node = input("Enter new value for node: ")
+        node = input("Enter new value for node: ").upper()
         graph.add_vertex(node)
         print(f"Added {node} to the graph.")
 
     elif option == "4":
-        origin = input("Enter name of the node origin: ")
-        destiny = input("Enter name of the node destination: ")
+        origin = input("Enter name of the node origin: ").upper()
+
+        destiny = input("Enter name of the node destination: ").upper()
         graph.add_edge(origin, destiny)
 
         print(f"Added an edge between {origin} and {destiny}")
@@ -100,7 +101,7 @@ while True:
         else:
             print(f"We did not find a way")
     elif option == "6":
-        label = input("Enter the name of the vertex")
+        label = input("Enter the name of the vertex").upper()
         graph.delete_vertex(label)
     elif option == "7":
         break
